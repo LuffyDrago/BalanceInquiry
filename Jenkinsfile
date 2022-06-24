@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Run and Compile Code') {
              when {
-                branch 'master'
+                branch 'main'
             }
             steps {
                 echo 'Running build automation'
