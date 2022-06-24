@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 echo 'Running build automation'
-                sh 'mvn clean install --settings configuration/settings.xml'
+                sh 'micro-gw build BalanceInquiry --deployment-config'
                 archiveArtifacts artifacts: '**/target/*.jar'
             }
         }
@@ -31,19 +31,19 @@ pipeline {
         
 
         
-        stage('Build balance-inquiry image') {
-             when {
-                branch 'master'
-            }
-            steps {
-                echo 'Running build automation'
+//         stage('Build balance-inquiry image') {
+//              when {
+//                 branch 'master'
+//             }
+//             steps {
+//                 echo 'Running build automation'
                 
-                sh 'mvn --settings configuration/settings.xml fabric8:build -Pkubernetes-deployment -DskipTests -Dfabric8.generator.spring-boot.name=USER_NAME'
+//                 sh 'mvn --settings configuration/settings.xml fabric8:build -Pkubernetes-deployment -DskipTests -Dfabric8.generator.spring-boot.name=USER_NAME'
                
                 
                 
-            }
-        }
+//             }
+//         }
         
 //         stage('Tag and Push Image to DockerHub') {
 //             when {
