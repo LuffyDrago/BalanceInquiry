@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 
-                sh 'micro-gw build BalanceInquiry --deployment-config  --micro-gw configuration/micro-gw-config' 
+                sh 'micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml' 
 //                 sh './update-plugins.sh'
 //                 archiveArtifacts artifacts: '**/target/*.jar'
             }
