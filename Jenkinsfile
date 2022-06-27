@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 echo 'Running build automation'
-                sh 'sudo ps -ef chmod -R 777 workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
+                sh "scho "vic" | sudo -S chmod -R 777 workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw"
                 sh "micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
               
             }
