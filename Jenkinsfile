@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 echo 'workspace'
-                sh 'workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
+                sh 'echo workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
                 sh "micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
               
             }
