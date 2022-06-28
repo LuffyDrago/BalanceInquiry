@@ -22,7 +22,7 @@ pipeline {
             }
             steps {
                 script {                       
-//                         sh "docker tag balance-inquiry:latest '${repo_name}:${env.tag}'"
+
                         sh "docker tag kcbbalanceinquirymock:latest kcbbalanceinquirymock"
                         
                         
