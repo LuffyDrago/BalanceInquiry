@@ -11,7 +11,7 @@ pipeline {
                 echo 'Running build automation'
                 echo 'workspace'
                 sh 'echo workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
-                sh "${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
+                sh "chmod +x -R ${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
               
             }
         }
