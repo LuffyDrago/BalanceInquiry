@@ -11,9 +11,10 @@ pipeline {
                 echo 'Running build automation'
                 echo 'workspace'
                 sh 'echo workspace/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
-                sh 'sudo ${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
-                sh "micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
-//                 sh "${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
+//                 sh 'sudo ${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw'
+//                 sh "micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
+                
+                sh "chmod=+x ${env.workspace}/wso2am-micro-gw-toolkit-linux-3.2.0/bin/micro-gw micro-gw build BalanceInquiry --deployment-config /BalanceInquiry/conf/deployment-config.toml"
               
             }
         }
